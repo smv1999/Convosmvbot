@@ -23,7 +23,7 @@ while True:
     elif("time" in chat and "now" in chat):
         print(datetime.datetime.now(),"is the current date and time")
     elif("exit" in chat or "bye" in chat):
-        print("Goodbye. It was nice talking to you.")
+        print("Goodbye. It was nice talking to you. I am looking forward to our next session.")
         break
     elif("+" in chat or "*" in chat or "-" in chat or "/" in chat):
         if(" " not in chat):
@@ -43,7 +43,7 @@ while True:
             print("You seem to be quite positive.")
         else:
             print("I understand.")
-    elif("no" in chat or "nope" in chat):
+    elif(chat=="no" or "nope" in chat):
         count_no+=1
         if(count_no>4):
             print("You seem to be quite negative.")
@@ -88,8 +88,24 @@ while True:
         print("Have you asked anyone else?")
     elif("sleepy" in chat or "sleep" in chat or "sleeping" in chat):
         print("Be brisk! Talk to me.")
-    elif("tired" in chat or "good night" in chat)    :
+    elif("tired" in chat or "good night" in chat):
         print("Take rest. Sweet dreams. Good night!")
+    elif("you" in chat and "good" in chat):
+        print("You do not want me to be good! Eh?")
+    elif("haha" in chat):
+        print("Why are you laughing?")
+    elif("like" in chat and "that" in chat):
+        print("Okay!")
+    elif("you" in chat and "see" in chat):
+        print("Why do you care about what I am seeing!")
+    elif("love" in chat and "you" in chat):
+        print("But I hate you!")
+    elif(len(chat.split())==3 and "what" in chat):
+        print("Okay! Collecting results...")
+        webbrowser.open(chat.split()[2]+'')
+    elif("you" in chat and "not" in chat and "understand" in chat):
+        print("Do ask about me!")
+
     else:
         print("I do not understand what you are speaking!")
         
