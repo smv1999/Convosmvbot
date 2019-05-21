@@ -4,6 +4,7 @@ import webbrowser
 import time
 count_yes=0
 count_no=0
+questions=["why?","what?","where?","when?","who?","how?"]
 Help="Arithmetic Calculations can be performed here.provide space between operand and operator while typing. Begin with open keyword to open any application specifying it.For example open calendar,open google.com"
 print()
 print("##############################################################")
@@ -84,7 +85,7 @@ while True:
         print("...")
         time.sleep(5)
         webbrowser.open('http://scoopwhoop.com/30-Amazing-Facts-From-Around-The-World-That-You-Wont-Believe-Are-True/#.m93entpyj')
-    elif(chat=="what" or chat=="what?"):
+    elif(chat in questions):
         print("Have you asked anyone else?")
     elif("sleepy" in chat or "sleep" in chat or "sleeping" in chat):
         print("Be brisk! Talk to me.")
@@ -105,9 +106,9 @@ while True:
         webbrowser.open(chat.split()[2]+'')
     elif("you" in chat and "not" in chat and "understand" in chat):
         print("Do ask about me!")
-
+    elif ("intelligent" in chat or "nice" in chat or "good" in chat):
+        print("Thanks!")
+    elif "sorry" in chat:
+        print("It is okay!")
     else:
         print("I do not understand what you are speaking!")
-        
-        
-    
